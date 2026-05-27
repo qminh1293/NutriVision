@@ -47,7 +47,7 @@ def load_pytorch_backend():
     num_classes = len(FOOD101_CLASSES)
     model.classifier[1] = nn.Linear(model.classifier[1].in_features, num_classes)
     
-    weight_path = r"D:\CV_Final_Project\efficientnet_food101.pth"
+    weight_path = r"efficientnet_food101.pth"
     if not os.path.exists(weight_path):
         st.error(f"Missing weight file at: {weight_path}")
         return None
